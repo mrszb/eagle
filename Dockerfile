@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 #ENV TZ=Europe/Bratislava
 #RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -22,7 +22,7 @@ RUN chown user:user /opt/eagle-${eagle_ver}
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         libnss3 xterm x11-apps \
-        glib2.0 mesa-utils and libgl1-mesa-glx libxrandr2 libasound2
+        glib2.0 mesa-utils libgl1-mesa-glx libxrandr2 libasound2
 
 # solving:
 # terminate called after throwing an instance of 'std::runtime_error'
